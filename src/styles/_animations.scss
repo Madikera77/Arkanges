@@ -1,0 +1,59 @@
+@use './variables' as *;
+
+// Fade in
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Slide up
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Reveal progressif
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn $transition-slow ease-in;
+}
+
+.slide-up {
+  animation: slideUp $transition-slow ease-out;
+}
+
+.reveal {
+  animation: reveal $transition-normal ease-out;
+}
+
+// Classes utilitaires pour animations
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity $transition-slow, transform $transition-slow;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

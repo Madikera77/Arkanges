@@ -1,0 +1,80 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  background: linear-gradient(135deg, $bg-secondary 0%, $violet-profond 100%);
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding: $spacing-lg 0 $spacing-md;
+  margin-top: $spacing-xl;
+}
+
+.footerContent {
+  margin-bottom: $spacing-md;
+}
+
+.footerTitle {
+  font-family: $font-heading;
+  color: $dore;
+  margin-bottom: $spacing-sm;
+  font-size: 1.5rem;
+}
+
+.footerTagline {
+  color: $text-primary;
+  font-style: italic;
+  margin-bottom: $spacing-sm;
+  font-weight: 500;
+}
+
+.footerText {
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.footerCategory {
+  color: $dore;
+  margin-bottom: $spacing-sm;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+.footerLink {
+  color: $text-secondary;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $dore;
+    padding-left: $spacing-xs;
+  }
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding-top: $spacing-md;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footerCopyright,
+.footerLegal {
+  color: $text-muted;
+  font-size: 0.875rem;
+}

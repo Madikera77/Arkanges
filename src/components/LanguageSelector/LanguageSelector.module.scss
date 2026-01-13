@@ -1,0 +1,10 @@
+@use '../../styles/variables' as *;
+
+.languageSelector {
+  min-width: 80px;
+}
+
+.select {
+  font-size: 0.875rem;
+  font-weight: 600;
+}

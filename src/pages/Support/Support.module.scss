@@ -1,0 +1,336 @@
+@use '../../styles/variables' as *;
+
+.support {
+  width: 100%;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(74, 20, 140, 0.75) 0%, rgba(26, 35, 126, 0.75) 50%, rgba(40, 53, 147, 0.75) 100%);
+    pointer-events: none;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: $spacing-lg 0;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  
+  @media (min-width: $breakpoint-lg) {
+    max-width: 1200px;
+  }
+  
+  @media (min-width: 1600px) {
+    max-width: 1400px;
+  }
+}
+
+.heroTitle {
+  color: $text-primary;
+  margin-bottom: calc($spacing-md + $spacing-xs);
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  font-size: 1.75rem;
+  max-width: 100%;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.375rem;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1.125rem;
+  }
+}
+
+.heroSubtitle {
+  color: $text-secondary;
+  margin-bottom: calc($spacing-lg + $spacing-sm);
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
+  max-width: 100%;
+  
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.875rem;
+  }
+}
+
+.section {
+  padding: $spacing-xl 0;
+  background: $bg-primary;
+}
+
+.intro {
+  color: $text-secondary;
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  text-align: center;
+  max-width: 900px;
+  margin: calc($spacing-sm + $spacing-xs) auto calc($spacing-lg + $spacing-sm);
+  
+  @media (min-width: $breakpoint-lg) {
+    max-width: 1200px;
+  }
+  
+  @media (min-width: 1600px) {
+    max-width: 1400px;
+  }
+}
+
+.optionsGrid {
+  margin-top: $spacing-lg;
+}
+
+.optionCard {
+  background: $bg-card !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  height: 100%;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.4) !important;
+  }
+}
+
+.optionIcon {
+  color: $dore;
+  font-size: 1.0625rem;
+  margin-bottom: $spacing-sm;
+  display: flex;
+  justify-content: center;
+  
+  svg {
+    font-size: 1.0625rem;
+  }
+}
+
+.optionTitle {
+  color: $dore;
+  margin-bottom: $spacing-sm;
+  font-size: 1.0625rem;
+  text-align: center;
+}
+
+.optionDescription {
+  color: $text-secondary;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: $spacing-md;
+}
+
+.optionBenefits {
+  list-style: none;
+  padding: 0;
+  margin: $spacing-md 0;
+  padding-left: $spacing-md;
+  
+  li {
+    position: relative;
+    margin-bottom: $spacing-xs;
+    
+    &::before {
+      content: '→';
+      position: absolute;
+      left: -$spacing-md;
+      color: $dore;
+      font-weight: bold;
+    }
+  }
+}
+
+.benefitItem {
+  color: $text-secondary;
+  line-height: 1.8;
+}
+
+.optionNote {
+  color: $text-muted;
+  font-style: italic;
+  margin-top: $spacing-md;
+  padding-top: $spacing-md;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  line-height: 1.8;
+}
+
+.donationSection {
+  padding: $spacing-xl 0;
+  background: $bg-secondary;
+}
+
+.donationBox {
+  background: $bg-card;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: $spacing-lg;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.donationTitle {
+  color: $dore;
+  margin-bottom: $spacing-md;
+}
+
+.donationText {
+  color: $text-secondary;
+  margin-bottom: $spacing-lg;
+  line-height: 1.9;
+}
+
+.donationForm {
+  max-width: 400px;
+  margin: 0 auto $spacing-md;
+}
+
+.donationInput {
+  margin-bottom: $spacing-md;
+  
+  :global(.MuiOutlinedInput-root) {
+    background: $bg-primary;
+    color: $text-primary;
+    
+    fieldset {
+      border-color: rgba(212, 175, 55, 0.3);
+    }
+    
+    &:hover fieldset {
+      border-color: rgba(212, 175, 55, 0.5);
+    }
+    
+    &.Mui-focused fieldset {
+      border-color: $dore;
+    }
+  }
+  
+  :global(.MuiInputLabel-root) {
+    color: $text-secondary;
+    
+    &.Mui-focused {
+      color: $dore;
+    }
+  }
+}
+
+.input {
+  color: $text-primary !important;
+}
+
+.label {
+  color: $text-secondary !important;
+}
+
+.donationButton {
+  background: $dore !important;
+  color: $bg-primary !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  padding: $spacing-sm $spacing-md !important;
+  transition: all $transition-normal !important;
+  
+  &:hover {
+    background: $lumiere-chaude !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+  }
+}
+
+.donationNote {
+  color: $text-muted;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.ctaSection {
+  padding: $spacing-xl 0;
+  background: linear-gradient(135deg, $bg-primary 0%, $violet-profond 100%);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  color: $dore;
+  margin-bottom: $spacing-md;
+}
+
+.ctaText {
+  color: $text-secondary;
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  margin-bottom: $spacing-lg;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border: 2px solid $dore;
+  background: transparent;
+  color: $dore;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-normal;
+  
+  &:hover {
+    background: $dore;
+    color: $bg-primary;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+  }
+}

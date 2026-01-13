@@ -1,0 +1,98 @@
+@use './variables' as *;
+
+// Typographie
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: $spacing-sm;
+  color: $text-primary;
+}
+
+h1 {
+  font-size: 2rem;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.375rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  margin-bottom: $spacing-sm;
+  color: $text-secondary;
+}
+
+a {
+  color: $dore;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $lumiere-chaude;
+  }
+}
+
+// Conteneurs
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  
+  @media (max-width: $breakpoint-md) {
+    padding: 0 $spacing-sm;
+  }
+}
+
+.section {
+  padding: $spacing-xl 0;
+  
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-lg 0;
+  }
+}
+
+// Boutons
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border: 2px solid $dore;
+  background: transparent;
+  color: $dore;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all $transition-normal;
+  
+  &:hover {
+    background: $dore;
+    color: $bg-primary;
+    transform: translateY(-2px);
+  }
+  
+  &.btn-primary {
+    background: $dore;
+    color: $bg-primary;
+    
+    &:hover {
+      background: $lumiere-chaude;
+      border-color: $lumiere-chaude;
+    }
+  }
+}
