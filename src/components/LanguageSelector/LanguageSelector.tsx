@@ -6,9 +6,9 @@ const LanguageSelector = () => {
   const { i18n } = useTranslation()
 
   const languages = [
-    { code: 'fr-CA', label: 'FR' },
-    { code: 'en-US', label: 'EN' },
-    { code: 'ht', label: 'HT' },
+    { code: 'fr-CA', label: 'FR', name: 'Français', flag: '/flags/ca.png' },
+    { code: 'en-US', label: 'EN', name: 'English', flag: '/flags/us.png' },
+    { code: 'ht', label: 'HT', name: 'Kreyòl', flag: '/flags/ht.png' },
   ]
 
   const handleLanguageChange = (event: SelectChangeEvent<string>) => {
@@ -21,6 +21,16 @@ const LanguageSelector = () => {
         value={i18n.language}
         onChange={handleLanguageChange}
         className={styles.select}
+        renderValue={(value) => {
+          const lang = languages.find((l) => l.code === value)
+          return lang ? (
+            <span className={styles.selectedValue}>
+              <img src={lang.flag} alt={lang.name} className={styles.flag} />
+            </span>
+          ) : (
+            value
+          )
+        }}
         sx={{
           color: '#F5F5F5',
           '& .MuiOutlinedInput-notchedOutline': {
@@ -38,8 +48,9 @@ const LanguageSelector = () => {
         }}
       >
         {languages.map((lang) => (
-          <MenuItem key={lang.code} value={lang.code}>
-            {lang.label}
+          <MenuItem key={lang.code} value={lang.code} className={styles.menuItem}>
+            <img src={lang.flag} alt={lang.name} className={styles.flag} />
+            <span className={styles.label}>{lang.name}</span>
           </MenuItem>
         ))}
       </Select>

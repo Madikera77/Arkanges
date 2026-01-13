@@ -1,10 +1,35 @@
 @use '../../styles/variables' as *;
 
 .languageSelector {
-  min-width: 80px;
+  min-width: 100px;
 }
 
 .select {
   font-size: 0.875rem;
   font-weight: 600;
+}
+
+.selectedValue {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.flag {
+  width: 24px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
 }
