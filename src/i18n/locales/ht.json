@@ -14,7 +14,7 @@
     "donate": "Fè yon don",
     "contactUs": "Kontakte nou",
     "missionTitle": "Misyon nou",
-    "missionText": "Ark'Anges se yon asosyasyon Kebekwa ki sipòte moun ki gen kansè nan lavi chak jou yo. Nou bay èd finansyè ak materyèl konkrè, òganize evènman charitab kiltirèl, epi enfòme pou de-dramatize kansè. Apwòch nou an santre sou lavi ak diyite, pa janm sou maladi a.",
+    "missionText": "Ark'Anges se yon asosyasyon Kebekwa ki sipòte moun ki gen kansè nan lavi chak jou yo. Nou bay èd finansyè ak materyèl konkrè, òganize evènman charitab kiltirèl, epi enfòme pou de-dramatize kansè. Apwòch nou an santre sou lavi ak diyite, plis pase sou maladi a.",
     "actionsTitle": "Aksyon konkrè nou yo",
     "action1Title": "Èd finansyè dirèk",
     "action1Desc": "Sipò konkrè pou konpansasyon mank revni ak depans ki gen rapò ak maladi a.",
@@ -25,12 +25,13 @@
     "discoverActions": "Dekouvri tout aksyon nou yo",
     "eventsTitle": "Evènman k ap vini yo",
     "event1Title": "Ann ri ansanm kont kansè",
-    "event1Date": "Fevriye 2024",
+    "event1Date": "22 fevriye 2026",
     "event1Desc": "Yon show komedyen pou rasanble, ri ansanm ak sensibilize.",
     "event2Title": "Vwa Zanj yo",
-    "event2Date": "Jen 2024",
+    "event2Date": "30 me 2026",
     "event2Desc": "Konsè charitab ki mete limyè sou bèlte ak fòs lavi a.",
-    "viewAllEvents": "Wè tout evènman yo"
+    "viewAllEvents": "Wè tout evènman yo",
+    "noUpcomingEvents": "Pa gen evènman k ap vini pou kounye a."
   },
   "about": {
     "title": "Sou Ark'Anges",
@@ -122,10 +123,26 @@
     "event4Ambiance": "Vivan, koulè, kominotè. Yon espas pou dekouvri ak pataje sou byennèt.",
     "objective": "Objektif",
     "ambiance": "Ambyans",
+    "comingSoon": "K ap vini",
     "ctaTitle": "Patisipe nan evènman nou yo",
     "ctaText": "Rasanble ak nou pou moman pataj, kilti ak jenewozite. Rete enfòme sou evènman k ap vini nou yo lè w kontakte nou.",
     "contactUs": "Kontakte nou",
     "supportUs": "Sipòte nou"
+  },
+  "eventDetail": {
+    "back": "Retou",
+    "date": "Dat",
+    "periodicity": "Periyodisite",
+    "location": "Kote",
+    "locationValue": "Kebèk, Kanada",
+    "about": "Sou evènman an",
+    "tickets": "Tikè",
+    "ctaTitle": "Patisipe nan evènman sa a",
+    "ctaText": "Rasanble avèk nou pou moman sa a nan pataj, kilti ak jenewozite. Kontakte nou pou plis enfòmasyon oswa pou enskri.",
+    "contactUs": "Kontakte nou",
+    "supportUs": "Sipòte nou",
+    "notFound": "Evènman pa jwenn",
+    "backToEvents": "Retou nan evènman yo"
   },
   "partners": {
     "title": "Patenarya nou yo",

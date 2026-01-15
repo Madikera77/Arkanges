@@ -13,10 +13,33 @@ import {
   Favorite as FavoriteIcon,
   Handshake as HandshakeIcon,
 } from "@mui/icons-material";
+import { getUpcomingEvents } from "../../data/events";
 import styles from "./Home.module.scss";
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const upcomingEvents = getUpcomingEvents().slice(0, 2); // Afficher seulement les 2 premiers événements à venir
+
+  const formatDate = (date: Date): string => {
+    return new Intl.DateTimeFormat(
+      i18n.language === "ht" ? "fr-CA" : i18n.language,
+      {
+        month: "long",
+        year: "numeric",
+        day: "numeric",
+      }
+    ).format(date);
+  };
+
+  const getEventTranslationKey = (eventId: string): string => {
+    const keyMap: Record<string, string> = {
+      comedy: "event1",
+      concert: "event2",
+      gala: "event3",
+      market: "event4",
+    };
+    return keyMap[eventId] || "event1";
+  };
 
   const actions = [
     {
@@ -136,45 +159,56 @@ const Home = () => {
           <Typography variant="h2" className={styles.sectionTitle}>
             {t("home.eventsTitle")}
           </Typography>
-          <Box className={styles.eventsPreview}>
-            <Card className={styles.eventCard}>
-              <Box className={styles.eventImage}>
-                <img src="/images/rions.png" alt="Comedy show" />
+          {upcomingEvents.length > 0 ? (
+            <>
+              <Box className={styles.eventsPreview}>
+                {upcomingEvents.map((event) => {
+                  const eventKey = getEventTranslationKey(event.id);
+                  return (
+                    <Card key={event.id} className={styles.eventCard}>
+                      <Box className={styles.eventImage}>
+                        <img
+                          src={event.image}
+                          alt={t(`home.${eventKey}Title`)}
+                        />
+                      </Box>
+                      <CardContent className={styles.eventCardContent}>
+                        <Box>
+                          <Typography
+                            variant="h4"
+                            className={styles.eventTitle}
+                          >
+                            {t(`home.${eventKey}Title`)}
+                          </Typography>
+                          <Typography
+                            variant="body2"
+                            className={styles.eventDate}
+                          >
+                            {formatDate(event.date)}
+                          </Typography>
+                        </Box>
+                        <Typography
+                          variant="body1"
+                          className={styles.eventDescription}
+                        >
+                          {t(`home.${eventKey}Desc`)}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </Box>
-              <CardContent>
-                <Typography variant="h4" className={styles.eventTitle}>
-                  {t("home.event1Title")}
-                </Typography>
-                <Typography variant="body2" className={styles.eventDate}>
-                  {t("home.event1Date")}
-                </Typography>
-                <Typography variant="body1" className={styles.eventDescription}>
-                  {t("home.event1Desc")}
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card className={styles.eventCard}>
-              <Box className={styles.eventImage}>
-                <img src="/images/concert.png" alt="Concert" />
+              <Box className={styles.eventsCTA}>
+                <Link to="/evenements" className={styles.btn}>
+                  {t("home.viewAllEvents")}
+                </Link>
               </Box>
-              <CardContent>
-                <Typography variant="h4" className={styles.eventTitle}>
-                  {t("home.event2Title")}
-                </Typography>
-                <Typography variant="body2" className={styles.eventDate}>
-                  {t("home.event2Date")}
-                </Typography>
-                <Typography variant="body1" className={styles.eventDescription}>
-                  {t("home.event2Desc")}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Box>
-          <Box className={styles.eventsCTA}>
-            <Link to="/evenements" className={styles.btn}>
-              {t("home.viewAllEvents")}
-            </Link>
-          </Box>
+            </>
+          ) : (
+            <Typography variant="body1" className={styles.sectionText}>
+              {t("home.noUpcomingEvents")}
+            </Typography>
+          )}
         </Container>
       </section>
     </div>

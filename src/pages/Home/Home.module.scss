@@ -119,6 +119,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: all $transition-normal;
+  border-radius: 9999px;
 
   &:hover {
     background: $dore;
@@ -285,6 +286,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: $spacing-md;
+  align-items: stretch;
 
   @media (max-width: $breakpoint-sm) {
     grid-template-columns: 1fr;
@@ -295,12 +297,23 @@
   background: $bg-card !important;
   border: 1px solid rgba(212, 175, 55, 0.2) !important;
   transition: transform $transition-normal, box-shadow $transition-normal;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
     border-color: rgba(212, 175, 55, 0.4) !important;
   }
+}
+
+.eventCardContent {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  height: 100% !important;
+  padding: $spacing-md !important;
 }
 
 .eventImage {
@@ -332,6 +345,7 @@
 .eventDescription {
   color: $text-secondary;
   line-height: 1.8;
+  margin-top: auto !important;
 }
 
 .eventsCTA {

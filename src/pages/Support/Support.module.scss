@@ -326,6 +326,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: all $transition-normal;
+  border-radius: 9999px;
   
   &:hover {
     background: $dore;

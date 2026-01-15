@@ -1,0 +1,326 @@
+@use '../../styles/variables' as *;
+
+.eventDetail {
+  width: 100%;
+}
+
+// Hero Section
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 20, 140, 0.85) 0%,
+    rgba(26, 35, 126, 0.85) 50%,
+    rgba(40, 53, 147, 0.85) 100%
+  );
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: $spacing-xl 0;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  
+  @media (min-width: $breakpoint-lg) {
+    max-width: 1200px;
+  }
+  
+  @media (min-width: 1600px) {
+    max-width: 1400px;
+  }
+}
+
+.backButton {
+  position: absolute;
+  top: $spacing-md;
+  left: 0;
+  color: $text-primary !important;
+  margin-bottom: $spacing-md;
+  
+  @media (max-width: $breakpoint-md) {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.heroIcon {
+  color: $dore;
+  font-size: 4rem !important;
+  margin-bottom: $spacing-md;
+  display: flex;
+  justify-content: center;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 3rem !important;
+  }
+}
+
+.heroTitle {
+  color: $text-primary;
+  margin-bottom: calc($spacing-md + $spacing-xs);
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  max-width: 100%;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1.25rem;
+  }
+}
+
+.heroSubtitle {
+  color: $text-secondary;
+  margin-bottom: calc($spacing-lg + $spacing-sm);
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-size: 1.125rem;
+  max-width: 100%;
+  
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1rem;
+  }
+}
+
+// Info Section
+.infoSection {
+  padding: $spacing-xl 0;
+  background: $bg-primary;
+}
+
+.infoGrid {
+  margin-top: $spacing-md;
+}
+
+.infoCard {
+  background: $bg-secondary;
+  padding: $spacing-lg;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all $transition-normal;
+  height: 100%;
+  
+  &:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+  }
+}
+
+.infoIcon {
+  color: $dore;
+  font-size: 2.5rem !important;
+  margin-bottom: $spacing-sm;
+}
+
+.infoLabel {
+  color: $dore;
+  font-weight: 600;
+  margin-bottom: $spacing-xs;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.infoValue {
+  color: $text-primary;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+// Description Section
+.descriptionSection {
+  padding: $spacing-xl 0;
+  background: $bg-secondary;
+}
+
+.objectiveSection {
+  padding: $spacing-xl 0;
+  background: $bg-primary;
+}
+
+.ambianceSection {
+  padding: $spacing-xl 0;
+  background: $bg-secondary;
+}
+
+.sectionContent {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  
+  @media (min-width: $breakpoint-lg) {
+    max-width: 1200px;
+  }
+  
+  @media (min-width: 1600px) {
+    max-width: 1400px;
+  }
+}
+
+.sectionTitle {
+  color: $dore;
+  margin-bottom: calc($spacing-md + $spacing-xs);
+  text-align: center;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  font-size: 1.5rem;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.25rem;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $dore, transparent);
+  }
+}
+
+.description,
+.objective,
+.ambiance {
+  color: $text-secondary;
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: calc($spacing-sm + $spacing-xs) auto 0;
+  text-align: center;
+}
+
+// Ticket Section
+.ticketSection {
+  padding: $spacing-xl 0;
+  background: $bg-primary;
+}
+
+// CTA Section
+.ctaSection {
+  padding: $spacing-xl 0;
+  background: linear-gradient(135deg, rgba(74, 20, 140, 0.1) 0%, rgba(26, 35, 126, 0.1) 100%);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  
+  @media (min-width: $breakpoint-lg) {
+    max-width: 1200px;
+  }
+  
+  @media (min-width: 1600px) {
+    max-width: 1400px;
+  }
+}
+
+.ctaTitle {
+  color: $dore;
+  margin-bottom: calc($spacing-md + $spacing-xs);
+  font-size: 1.75rem;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.5rem;
+  }
+}
+
+.ctaText {
+  color: $text-secondary;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: $spacing-lg;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  background: transparent;
+  color: $dore;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-normal;
+  border: 2px solid $dore;
+  border-radius: 9999px;
+  
+  &:hover {
+    background: $dore;
+    color: $bg-primary;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+  }
+}
+
+// Not Found
+.notFound {
+  text-align: center;
+  padding: $spacing-xl 0;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backLink {
+  color: $dore;
+  text-decoration: none;
+  margin-top: $spacing-md;
+  font-weight: 600;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $lumiere-chaude;
+  }
+}

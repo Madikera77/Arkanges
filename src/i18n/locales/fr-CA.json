@@ -14,7 +14,7 @@
     "donate": "Faire un don",
     "contactUs": "Nous contacter",
     "missionTitle": "Notre mission",
-    "missionText": "Ark'Anges est une association québécoise qui accompagne les personnes atteintes de cancer dans leur vie quotidienne. Nous apportons des aides financières et matérielles concrètes, organisons des événements caritatifs culturels, et informons pour dédramatiser le cancer. Notre approche est centrée sur la vie et la dignité, jamais sur la maladie.",
+    "missionText": "Ark'Anges est une association québécoise qui accompagne les personnes atteintes de cancer dans leur vie quotidienne. Nous apportons des aides financières et matérielles concrètes, organisons des événements caritatifs culturels, et informons pour dédramatiser le cancer. Notre approche est centrée sur la vie et la dignité, plus que sur la maladie.",
     "actionsTitle": "Nos actions concrètes",
     "action1Title": "Aide financière directe",
     "action1Desc": "Soutien concret pour pallier le manque à gagner et les dépenses liées à la maladie.",
@@ -25,12 +25,13 @@
     "discoverActions": "Découvrir toutes nos actions",
     "eventsTitle": "Prochains événements",
     "event1Title": "Rions ensemble contre le cancer",
-    "event1Date": "Février 2024",
+    "event1Date": "22 février 2026",
     "event1Desc": "Un show d'humour pour rassembler, rire ensemble et sensibiliser.",
     "event2Title": "La Voix des Anges",
-    "event2Date": "Juin 2024",
+    "event2Date": "30 mai 2026",
     "event2Desc": "Concert caritatif mettant en lumière la beauté et la force de la vie.",
-    "viewAllEvents": "Voir tous les événements"
+    "viewAllEvents": "Voir tous les événements",
+    "noUpcomingEvents": "Aucun événement à venir pour le moment."
   },
   "about": {
     "title": "À propos d'Ark'Anges",
@@ -122,10 +123,26 @@
     "event4Ambiance": "Vivante, colorée, communautaire. Un espace de découverte et de partage autour du bien-être.",
     "objective": "Objectif",
     "ambiance": "Ambiance",
+    "comingSoon": "À venir",
     "ctaTitle": "Participez à nos événements",
     "ctaText": "Rejoignez-nous pour des moments de partage, de culture et de générosité. Restez informés de nos prochains événements en nous contactant.",
     "contactUs": "Nous contacter",
     "supportUs": "Nous soutenir"
+  },
+  "eventDetail": {
+    "back": "Retour",
+    "date": "Date",
+    "periodicity": "Périodicité",
+    "location": "Lieu",
+    "locationValue": "Québec, Canada",
+    "about": "À propos de l'événement",
+    "tickets": "Billets",
+    "ctaTitle": "Participez à cet événement",
+    "ctaText": "Rejoignez-nous pour ce moment de partage, de culture et de générosité. Contactez-nous pour plus d'informations ou pour vous inscrire.",
+    "contactUs": "Nous contacter",
+    "supportUs": "Nous soutenir",
+    "notFound": "Événement non trouvé",
+    "backToEvents": "Retour aux événements"
   },
   "partners": {
     "title": "Nos partenaires",

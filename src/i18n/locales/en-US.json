@@ -14,7 +14,7 @@
     "donate": "Make a donation",
     "contactUs": "Contact us",
     "missionTitle": "Our mission",
-    "missionText": "Ark'Anges is a Quebec association that supports people with cancer in their daily lives. We provide concrete financial and material assistance, organize cultural charity events, and inform to destigmatize cancer. Our approach is centered on life and dignity, never on the disease.",
+    "missionText": "Ark'Anges is a Quebec association that supports people with cancer in their daily lives. We provide concrete financial and material assistance, organize cultural charity events, and inform to destigmatize cancer. Our approach is centered on life and dignity, more than on the disease.",
     "actionsTitle": "Our concrete actions",
     "action1Title": "Direct financial assistance",
     "action1Desc": "Concrete support to offset loss of income and expenses related to the disease.",
@@ -25,12 +25,13 @@
     "discoverActions": "Discover all our actions",
     "eventsTitle": "Upcoming events",
     "event1Title": "Let's laugh together against cancer",
-    "event1Date": "February 2024",
+    "event1Date": "February 22, 2026",
     "event1Desc": "A comedy show to bring people together, laugh together and raise awareness.",
     "event2Title": "The Voice of Angels",
-    "event2Date": "June 2024",
+    "event2Date": "May 30, 2026",
     "event2Desc": "Charity concert highlighting the beauty and strength of life.",
-    "viewAllEvents": "View all events"
+    "viewAllEvents": "View all events",
+    "noUpcomingEvents": "No upcoming events at the moment."
   },
   "about": {
     "title": "About Ark'Anges",
@@ -122,10 +123,26 @@
     "event4Ambiance": "Lively, colorful, community-based. A space for discovery and sharing around wellness.",
     "objective": "Objective",
     "ambiance": "Ambiance",
+    "comingSoon": "Coming soon",
     "ctaTitle": "Participate in our events",
     "ctaText": "Join us for moments of sharing, culture and generosity. Stay informed about our upcoming events by contacting us.",
     "contactUs": "Contact us",
     "supportUs": "Support us"
+  },
+  "eventDetail": {
+    "back": "Back",
+    "date": "Date",
+    "periodicity": "Periodicity",
+    "location": "Location",
+    "locationValue": "Quebec, Canada",
+    "about": "About the event",
+    "tickets": "Tickets",
+    "ctaTitle": "Participate in this event",
+    "ctaText": "Join us for this moment of sharing, culture and generosity. Contact us for more information or to register.",
+    "contactUs": "Contact us",
+    "supportUs": "Support us",
+    "notFound": "Event not found",
+    "backToEvents": "Back to events"
   },
   "partners": {
     "title": "Our partners",
