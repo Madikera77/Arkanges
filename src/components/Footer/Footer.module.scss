@@ -28,6 +28,45 @@
 .footerText {
   color: $text-secondary;
   line-height: 1.8;
+  margin-bottom: $spacing-md;
+}
+
+.socialLinks {
+  margin-top: $spacing-md;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  text-decoration: none;
+  color: $text-secondary;
+  transition: color $transition-fast;
+  width: fit-content;
+  
+  &:hover {
+    color: $dore;
+    
+    .socialIcon {
+      color: $dore !important;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.socialIcon {
+  color: $text-secondary !important;
+  transition: color $transition-fast, transform $transition-fast;
+  padding: $spacing-xs !important;
+  
+  svg {
+    font-size: 1.5rem;
+  }
+}
+
+.socialText {
+  color: inherit;
+  font-weight: 500;
 }
 
 .footerCategory {

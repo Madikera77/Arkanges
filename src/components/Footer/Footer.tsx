@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography, IconButton } from '@mui/material'
+import InstagramIcon from '@mui/icons-material/Instagram'
 import styles from './Footer.module.scss'
 
 const Footer = () => {
@@ -35,6 +36,24 @@ const Footer = () => {
             <Typography variant="body2" className={styles.footerText}>
               {t('footer.description')}
             </Typography>
+            <Box className={styles.socialLinks}>
+              <a
+                href="https://www.instagram.com/ark.anges"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+              >
+                <IconButton
+                  className={styles.socialIcon}
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon />
+                </IconButton>
+                <Typography variant="body2" className={styles.socialText}>
+                  {t('footer.followInstagram')}
+                </Typography>
+              </a>
+            </Box>
           </Grid>
 
           {Object.entries(footerLinks).map(([category, links]) => (
