@@ -72,10 +72,7 @@ const Home = () => {
         <Container maxWidth="lg">
           <Box className={styles.sectionContent}>
             <Box className={styles.missionImage}>
-              <img
-                src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Community support"
-              />
+              <img src="/images/mission.png" alt="Community support" />
             </Box>
             <Typography variant="h2" className={styles.sectionTitle}>
               {t("home.missionTitle")}
@@ -102,10 +99,10 @@ const Home = () => {
                       <img
                         src={
                           action.id === "financial"
-                            ? "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            ? "/images/aide_financiere.png"
                             : action.id === "vouchers"
-                            ? "https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            : "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            ? "/images/bon_achat.png"
+                            : "/images/events.png"
                         }
                         alt={action.title}
                       />
@@ -142,10 +139,7 @@ const Home = () => {
           <Box className={styles.eventsPreview}>
             <Card className={styles.eventCard}>
               <Box className={styles.eventImage}>
-                <img
-                  src="https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="Comedy show"
-                />
+                <img src="/images/rions.png" alt="Comedy show" />
               </Box>
               <CardContent>
                 <Typography variant="h4" className={styles.eventTitle}>
@@ -161,10 +155,7 @@ const Home = () => {
             </Card>
             <Card className={styles.eventCard}>
               <Box className={styles.eventImage}>
-                <img
-                  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                  alt="Concert"
-                />
+                <img src="/images/concert.png" alt="Concert" />
               </Box>
               <CardContent>
                 <Typography variant="h4" className={styles.eventTitle}>

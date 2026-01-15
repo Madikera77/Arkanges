@@ -19,7 +19,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-image: url("/images/hero-home.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -57,17 +57,11 @@
   z-index: 1;
   text-align: center;
   padding: $spacing-xl 0;
-  max-width: 900px;
   margin: 0 auto;
   width: 100%;
-
-  @media (min-width: $breakpoint-lg) {
-    max-width: 1200px;
-  }
-
-  @media (min-width: 1600px) {
-    max-width: 1400px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .heroTitle {
@@ -182,7 +176,7 @@
 
 .sectionTitle {
   color: $dore;
-  margin-bottom: calc($spacing-md + $spacing-xs);
+  margin-bottom: $spacing-md !important;
   text-align: center;
   position: relative;
   padding-bottom: $spacing-sm;
@@ -211,14 +205,6 @@
   text-align: center;
   max-width: 100%;
   margin: calc($spacing-sm + $spacing-xs) auto 0;
-
-  @media (min-width: $breakpoint-md) {
-    max-width: 800px;
-  }
-
-  @media (min-width: $breakpoint-lg) {
-    max-width: 1000px;
-  }
 }
 
 // Actions Section
@@ -228,7 +214,7 @@
 }
 
 .actionsGrid {
-  margin-top: $spacing-lg;
+  margin-top: 0;
 }
 
 .actionCard {
@@ -299,7 +285,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: $spacing-md;
-  margin-top: $spacing-lg;
 
   @media (max-width: $breakpoint-sm) {
     grid-template-columns: 1fr;
