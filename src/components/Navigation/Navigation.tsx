@@ -45,7 +45,11 @@ const Navigation = () => {
       <AppBar position="sticky" className={styles.navbar}>
         <Toolbar className={styles.toolbar}>
           <Link to="/" className={styles.logo}>
-            <span className={styles.logoText}>Ark'Anges</span>
+            <img
+              src="/logos/header-logo.png"
+              alt="Ark'Anges"
+              className={styles.logoImage}
+            />
           </Link>
 
           {isMobile ? (
@@ -89,7 +93,11 @@ const Navigation = () => {
         }}
       >
         <div className={styles.drawerHeader}>
-          <span className={styles.logoText}>Ark'Anges</span>
+          <img
+            src="/logos/header-logo.png"
+            alt="Ark'Anges"
+            className={styles.drawerLogoImage}
+          />
           <IconButton onClick={handleDrawerToggle}>
             <CloseIcon />
           </IconButton>

@@ -24,10 +24,19 @@
   text-decoration: none;
   color: $text-primary;
   transition: transform $transition-fast;
+  display: flex;
+  align-items: center;
 
   &:hover {
     transform: scale(1.05);
   }
+}
+
+.logoImage {
+  height: auto;
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logoText {
@@ -104,6 +113,13 @@
   align-items: center;
   padding: $spacing-md;
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.drawerLogoImage {
+  height: auto;
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .drawer {
