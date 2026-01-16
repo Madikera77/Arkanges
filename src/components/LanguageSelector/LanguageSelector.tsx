@@ -9,6 +9,7 @@ const LanguageSelector = () => {
     { code: 'fr-CA', label: 'FR', name: 'Français', flag: '/flags/ca.png' },
     { code: 'en-US', label: 'EN', name: 'English', flag: '/flags/us.png' },
     { code: 'ht', label: 'HT', name: 'Kreyòl', flag: '/flags/ht.png' },
+    { code: 'es-ES', label: 'ES', name: 'Español', flag: '/flags/es.png' },
   ]
 
   const handleLanguageChange = (event: SelectChangeEvent<string>) => {
@@ -34,13 +35,13 @@ const LanguageSelector = () => {
         sx={{
           color: '#F5F5F5',
           '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'rgba(212, 175, 55, 0.3)',
+            border: 'none',
           },
           '&:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'rgba(212, 175, 55, 0.5)',
+            border: 'none',
           },
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#D4AF37',
+            border: 'none',
           },
           '& .MuiSvgIcon-root': {
             color: '#D4AF37',

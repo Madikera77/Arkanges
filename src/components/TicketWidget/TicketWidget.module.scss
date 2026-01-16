@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+
+.ticketWidget {
+  width: 100%;
+  margin: $spacing-xl 0;
+  padding: $spacing-lg;
+  background: $bg-secondary;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  position: relative;
+
+  .loading {
+    text-align: center;
+    padding: $spacing-lg;
+    color: $text-secondary;
+  }
+}

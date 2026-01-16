@@ -4,6 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import frCA from './locales/fr-CA.json'
 import enUS from './locales/en-US.json'
 import ht from './locales/ht.json'
+import esES from './locales/es-ES.json'
 
 i18n
   .use(LanguageDetector)
@@ -13,6 +14,7 @@ i18n
       'fr-CA': { translation: frCA },
       'en-US': { translation: enUS },
       'ht': { translation: ht },
+      'es-ES': { translation: esES },
     },
     fallbackLng: 'fr-CA',
     defaultNS: 'translation',
