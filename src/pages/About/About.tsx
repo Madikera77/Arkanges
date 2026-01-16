@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next";
 import {
   Favorite as FavoriteIcon,
   Visibility as VisionIcon,
-  Star as StarIcon,
   Lightbulb as LightbulbIcon,
   Timeline as TimelineIcon,
 } from "@mui/icons-material";
