@@ -12,6 +12,7 @@ import {
   Visibility as VisionIcon,
   Star as StarIcon,
   Lightbulb as LightbulbIcon,
+  Timeline as TimelineIcon,
 } from "@mui/icons-material";
 import styles from "./About.module.scss";
 
@@ -19,6 +20,11 @@ const About = () => {
   const { t } = useTranslation();
 
   const values = [
+    {
+      icon: <TimelineIcon />,
+      title: t("about.value0Title"),
+      description: t("about.value0Desc"),
+    },
     {
       icon: <FavoriteIcon />,
       title: t("about.value1Title"),
@@ -28,11 +34,6 @@ const About = () => {
       icon: <VisionIcon />,
       title: t("about.value2Title"),
       description: t("about.value2Desc"),
-    },
-    {
-      icon: <StarIcon />,
-      title: t("about.value3Title"),
-      description: t("about.value3Desc"),
     },
     {
       icon: <LightbulbIcon />,
@@ -70,6 +71,9 @@ const About = () => {
             </Typography>
             <Typography variant="body1" className={styles.sectionText}>
               {t("about.whoWeAreText2")}
+            </Typography>
+            <Typography variant="body1" className={styles.sectionText}>
+              {t("about.whoWeAreText3")}
             </Typography>
           </Box>
         </Container>
