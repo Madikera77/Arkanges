@@ -49,17 +49,14 @@ const Navigation = () => {
           </Link>
 
           {isMobile ? (
-            <>
-              <LanguageSelector />
-              <IconButton
-                color="inherit"
-                aria-label="menu"
-                onClick={handleDrawerToggle}
-                className={styles.menuButton}
-              >
-                <MenuIcon />
-              </IconButton>
-            </>
+            <IconButton
+              color="inherit"
+              aria-label="menu"
+              onClick={handleDrawerToggle}
+              className={styles.menuButton}
+            >
+              <MenuIcon />
+            </IconButton>
           ) : (
             <>
               <nav className={styles.nav}>
@@ -112,6 +109,9 @@ const Navigation = () => {
             </ListItemButton>
           ))}
         </List>
+        <div className={styles.drawerLanguageSelector}>
+          <LanguageSelector showText={true} />
+        </div>
       </Drawer>
     </>
   );
