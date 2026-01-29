@@ -227,6 +227,10 @@
     "addressValue": "Quebec, Canada",
     "infoNote": "We generally respond within 48 hours. For urgent requests, please do not hesitate to call us directly."
   },
+  "comingSoon": {
+    "title": "Coming Soon",
+    "subtitle": "Site under construction... Check back soon!"
+  },
   "footer": {
     "tagline": "We support life, not the disease.",
     "description": "Quebec association supporting people with cancer.",

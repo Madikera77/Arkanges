@@ -227,6 +227,10 @@
     "addressValue": "Québec, Canada",
     "infoNote": "Nous répondons généralement dans les 48 heures. Pour les demandes urgentes, n'hésitez pas à nous appeler directement."
   },
+  "comingSoon": {
+    "title": "Bientôt disponible",
+    "subtitle": "Site en construction... Revenez très bientôt !"
+  },
   "footer": {
     "tagline": "Nous accompagnons la vie, pas la maladie.",
     "description": "Association québécoise d'accompagnement des personnes atteintes de cancer.",

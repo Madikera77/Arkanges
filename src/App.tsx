@@ -12,24 +12,46 @@ import EventDetail from './pages/EventDetail/EventDetail'
 import Partners from './pages/Partners/Partners'
 import Support from './pages/Support/Support'
 import Contact from './pages/Contact/Contact'
+import ComingSoon from './pages/ComingSoon/ComingSoon'
+
+const isLocalhost =
+  typeof window !== 'undefined' &&
+  ['localhost', '127.0.0.1'].includes(window.location.hostname)
 
 function App() {
+  if (!isLocalhost) {
+    return (
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <ComingSoon />
+      </ThemeProvider>
+    )
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <ScrollToTop />
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/a-propos" element={<About />} />
-          <Route path="/nos-actions" element={<Actions />} />
-          <Route path="/evenements" element={<Events />} />
-          <Route path="/evenements/:eventId" element={<EventDetail />} />
-          <Route path="/partenaires" element={<Partners />} />
-          <Route path="/nous-soutenir" element={<Support />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/a-propos" element={<About />} />
+                <Route path="/nos-actions" element={<Actions />} />
+                <Route path="/evenements" element={<Events />} />
+                <Route path="/evenements/:eventId" element={<EventDetail />} />
+                <Route path="/partenaires" element={<Partners />} />
+                <Route path="/nous-soutenir" element={<Support />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Layout>
+          }
+        />
+      </Routes>
     </ThemeProvider>
   )
 }
