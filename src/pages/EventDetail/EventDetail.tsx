@@ -13,6 +13,7 @@ import {
 } from "@mui/icons-material";
 import { getEventById } from "../../data/events";
 import TicketWidget from "../../components/TicketWidget/TicketWidget";
+import { ROUTES } from "../../constants/routes";
 import styles from "./EventDetail.module.scss";
 
 const EventDetail = () => {
@@ -59,7 +60,7 @@ const EventDetail = () => {
         <Container maxWidth="lg">
           <Box className={styles.notFound}>
             <Typography variant="h2">{t("eventDetail.notFound")}</Typography>
-            <Link to="/evenements" className={styles.backLink}>
+            <Link to={ROUTES.EVENTS} className={styles.backLink}>
               {t("eventDetail.backToEvents")}
             </Link>
           </Box>
@@ -86,7 +87,7 @@ const EventDetail = () => {
         <Container maxWidth="lg">
           <Box className={styles.notFound}>
             <Typography variant="h2">{t("eventDetail.notFound")}</Typography>
-            <Link to="/evenements" className={styles.backLink}>
+            <Link to={ROUTES.EVENTS} className={styles.backLink}>
               {t("eventDetail.backToEvents")}
             </Link>
           </Box>
@@ -104,7 +105,7 @@ const EventDetail = () => {
           <Box className={styles.heroContent}>
             <Button
               startIcon={<ArrowBackIcon />}
-              onClick={() => navigate("/evenements")}
+              onClick={() => navigate(ROUTES.EVENTS)}
               className={styles.backButton}
             >
               {t("eventDetail.back")}
@@ -228,10 +229,10 @@ const EventDetail = () => {
               {t("eventDetail.ctaText")}
             </Typography>
             <Box className={styles.ctaButtons}>
-              <Link to="/contact" className={styles.btn}>
+              <Link to={ROUTES.CONTACT} className={styles.btn}>
                 {t("eventDetail.contactUs")}
               </Link>
-              <Link to="/nous-soutenir" className={styles.btn}>
+              <Link to={ROUTES.SUPPORT} className={styles.btn}>
                 {t("eventDetail.supportUs")}
               </Link>
             </Box>

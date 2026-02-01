@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import { ROUTES } from "../../constants/routes";
 import styles from "./Navigation.module.scss";
 
 const Navigation = () => {
@@ -23,13 +24,13 @@ const Navigation = () => {
   const { t } = useTranslation();
 
   const menuItems = [
-    { path: "/", label: t("nav.home") },
-    { path: "/a-propos", label: t("nav.about") },
-    { path: "/nos-actions", label: t("nav.actions") },
-    { path: "/evenements", label: t("nav.events") },
-    { path: "/partenaires", label: t("nav.partners") },
-    { path: "/nous-soutenir", label: t("nav.support") },
-    { path: "/contact", label: t("nav.contact") },
+    { path: ROUTES.HOME, label: t("nav.home") },
+    { path: ROUTES.ABOUT, label: t("nav.about") },
+    { path: ROUTES.ACTIONS, label: t("nav.actions") },
+    { path: ROUTES.EVENTS, label: t("nav.events") },
+    { path: ROUTES.PARTNERS, label: t("nav.partners") },
+    { path: ROUTES.SUPPORT, label: t("nav.support") },
+    { path: ROUTES.CONTACT, label: t("nav.contact") },
   ];
 
   const handleDrawerToggle = () => {
@@ -44,7 +45,7 @@ const Navigation = () => {
     <>
       <AppBar position="sticky" className={styles.navbar}>
         <Toolbar className={styles.toolbar}>
-          <Link to="/" className={styles.logo}>
+          <Link to={ROUTES.HOME} className={styles.logo}>
             <img
               src="/logos/header-logo.png"
               alt="Ark'Anges"

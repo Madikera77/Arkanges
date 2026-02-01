@@ -6,6 +6,7 @@ import {
   Handshake as PartnerIcon, 
   VolunteerActivism as VolunteerIcon 
 } from '@mui/icons-material'
+import { ROUTES } from '../../constants/routes'
 import styles from './Support.module.scss'
 
 const Support = () => {
@@ -173,7 +174,7 @@ const Support = () => {
               Nous sommes là pour répondre à toutes vos questions.
             </Typography>
             <Box className={styles.ctaButtons}>
-              <Link to="/contact" className={styles.btn}>
+              <Link to={ROUTES.CONTACT} className={styles.btn}>
                 Nous contacter
               </Link>
             </Box>

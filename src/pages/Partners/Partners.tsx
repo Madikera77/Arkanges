@@ -1,6 +1,7 @@
 import { Container, Box, Typography, Grid, Card, CardContent } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { Handshake as PartnershipIcon } from '@mui/icons-material'
+import { ROUTES } from '../../constants/routes'
 import styles from './Partners.module.scss'
 
 const Partners = () => {
@@ -127,10 +128,10 @@ const Partners = () => {
               à nos bénéficiaires, dans le respect de nos principes éthiques.
             </Typography>
             <Box className={styles.becomePartnerButtons}>
-              <Link to="/contact" className={styles.btn}>
+              <Link to={ROUTES.CONTACT} className={styles.btn}>
                 Nous contacter
               </Link>
-              <Link to="/nous-soutenir" className={styles.btn}>
+              <Link to={ROUTES.SUPPORT} className={styles.btn}>
                 En savoir plus
               </Link>
             </Box>

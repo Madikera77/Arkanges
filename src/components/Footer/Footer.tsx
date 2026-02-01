@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Box, Container, Grid, Typography, IconButton } from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import { ROUTES } from '../../constants/routes'
 import styles from './Footer.module.scss'
 
 const Footer = () => {
@@ -10,15 +11,15 @@ const Footer = () => {
 
   const footerLinks = {
     [t('footer.navigation')]: [
-      { path: '/', label: t('nav.home') },
-      { path: '/a-propos', label: t('nav.about') },
-      { path: '/nos-actions', label: t('nav.actions') },
-      { path: '/evenements', label: t('nav.events') },
+      { path: ROUTES.HOME, label: t('nav.home') },
+      { path: ROUTES.ABOUT, label: t('nav.about') },
+      { path: ROUTES.ACTIONS, label: t('nav.actions') },
+      { path: ROUTES.EVENTS, label: t('nav.events') },
     ],
     [t('footer.support')]: [
-      { path: '/nous-soutenir', label: t('nav.support') },
-      { path: '/partenaires', label: t('nav.partners') },
-      { path: '/contact', label: t('nav.contact') },
+      { path: ROUTES.SUPPORT, label: t('nav.support') },
+      { path: ROUTES.PARTNERS, label: t('nav.partners') },
+      { path: ROUTES.CONTACT, label: t('nav.contact') },
     ],
   }
 

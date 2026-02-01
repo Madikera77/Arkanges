@@ -1,10 +1,12 @@
 import { Container, Box, Typography, Grid, Card, CardContent } from '@mui/material'
+import { Link } from 'react-router-dom'
 import { 
   AttachMoney as MoneyIcon, 
   ShoppingCart as ShoppingIcon, 
   Handshake as PartnershipIcon, 
   Info as InfoIcon 
 } from '@mui/icons-material'
+import { ROUTES } from '../../constants/routes'
 import styles from './Actions.module.scss'
 
 const Actions = () => {
@@ -125,9 +127,9 @@ const Actions = () => {
               Contactez-nous pour en savoir plus sur nos programmes d'aide et nos critères d'éligibilité.
             </Typography>
             <Box className={styles.ctaButtons}>
-              <a href="/contact" className={styles.btn}>
+              <Link to={ROUTES.CONTACT} className={styles.btn}>
                 Nous contacter
-              </a>
+              </Link>
             </Box>
           </Box>
         </Container>

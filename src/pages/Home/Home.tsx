@@ -14,6 +14,7 @@ import {
   Handshake as HandshakeIcon,
 } from "@mui/icons-material";
 import { getUpcomingEvents } from "../../data/events";
+import { ROUTES } from "../../constants/routes";
 import styles from "./Home.module.scss";
 
 const Home = () => {
@@ -77,12 +78,12 @@ const Home = () => {
             </Typography>
             <Box className={styles.heroActions}>
               <Link
-                to="/nous-soutenir"
+                to={ROUTES.SUPPORT}
                 className={`${styles.btn} ${styles.btnPrimary}`}
               >
                 {t("home.donate")}
               </Link>
-              <Link to="/contact" className={styles.btn}>
+              <Link to={ROUTES.CONTACT} className={styles.btn}>
                 {t("home.contactUs")}
               </Link>
             </Box>
@@ -146,7 +147,7 @@ const Home = () => {
             ))}
           </Grid>
           <Box className={styles.actionsCTA}>
-            <Link to="/nos-actions" className={styles.btn}>
+            <Link to={ROUTES.ACTIONS} className={styles.btn}>
               {t("home.discoverActions")}
             </Link>
           </Box>
@@ -199,7 +200,7 @@ const Home = () => {
                 })}
               </Box>
               <Box className={styles.eventsCTA}>
-                <Link to="/evenements" className={styles.btn}>
+                <Link to={ROUTES.EVENTS} className={styles.btn}>
                   {t("home.viewAllEvents")}
                 </Link>
               </Box>

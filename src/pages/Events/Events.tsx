@@ -8,6 +8,7 @@ import {
   Store as MarketIcon 
 } from '@mui/icons-material'
 import { events } from '../../data/events'
+import { ROUTES, eventDetail } from '../../constants/routes'
 import styles from './Events.module.scss'
 
 const Events = () => {
@@ -91,7 +92,7 @@ const Events = () => {
           <Grid container spacing={4}>
             {enrichedEvents.map((event) => (
               <Grid item xs={12} key={event.id}>
-                <Link to={`/evenements/${event.id}`} className={styles.eventLink}>
+                <Link to={eventDetail(event.id)} className={styles.eventLink}>
                 <Card className={styles.eventCard}>
                   <CardContent>
                     <Box className={styles.eventHeader}>
@@ -156,10 +157,10 @@ const Events = () => {
               {t('events.ctaText')}
             </Typography>
             <Box className={styles.ctaButtons}>
-              <Link to="/contact" className={styles.btn}>
+              <Link to={ROUTES.CONTACT} className={styles.btn}>
                 {t('events.contactUs')}
               </Link>
-              <Link to="/nous-soutenir" className={styles.btn}>
+              <Link to={ROUTES.SUPPORT} className={styles.btn}>
                 {t('events.supportUs')}
               </Link>
             </Box>

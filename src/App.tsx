@@ -13,6 +13,7 @@ import Partners from './pages/Partners/Partners'
 import Support from './pages/Support/Support'
 import Contact from './pages/Contact/Contact'
 import ComingSoon from './pages/ComingSoon/ComingSoon'
+import { ROUTES } from './constants/routes'
 
 const BILLETTERIE_URL =
   'https://ticketscandy.com/e/rions-ensemble-contre-le-cancer-14644'
@@ -24,7 +25,7 @@ const isLocalhost =
 function App() {
   if (
     typeof window !== 'undefined' &&
-    window.location.pathname === '/billetterie'
+    window.location.pathname === ROUTES.BILLETTERIE
   ) {
     window.location.replace(BILLETTERIE_URL)
     return null
@@ -44,20 +45,20 @@ function App() {
       <CssBaseline />
       <ScrollToTop />
       <Routes>
-        <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path={ROUTES.COMING_SOON} element={<ComingSoon />} />
         <Route
           path="*"
           element={
             <Layout>
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/a-propos" element={<About />} />
-                <Route path="/nos-actions" element={<Actions />} />
-                <Route path="/evenements" element={<Events />} />
-                <Route path="/evenements/:eventId" element={<EventDetail />} />
-                <Route path="/partenaires" element={<Partners />} />
-                <Route path="/nous-soutenir" element={<Support />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path={ROUTES.HOME} element={<Home />} />
+                <Route path={ROUTES.ABOUT} element={<About />} />
+                <Route path={ROUTES.ACTIONS} element={<Actions />} />
+                <Route path={ROUTES.EVENTS} element={<Events />} />
+                <Route path={ROUTES.EVENT_DETAIL} element={<EventDetail />} />
+                <Route path={ROUTES.PARTNERS} element={<Partners />} />
+                <Route path={ROUTES.SUPPORT} element={<Support />} />
+                <Route path={ROUTES.CONTACT} element={<Contact />} />
               </Routes>
             </Layout>
           }
