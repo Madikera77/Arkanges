@@ -14,11 +14,22 @@ import Support from './pages/Support/Support'
 import Contact from './pages/Contact/Contact'
 import ComingSoon from './pages/ComingSoon/ComingSoon'
 
+const BILLETTERIE_URL =
+  'https://ticketscandy.com/e/rions-ensemble-contre-le-cancer-14644'
+
 const isLocalhost =
   typeof window !== 'undefined' &&
   ['localhost', '127.0.0.1'].includes(window.location.hostname)
 
 function App() {
+  if (
+    typeof window !== 'undefined' &&
+    window.location.pathname === '/billetterie'
+  ) {
+    window.location.replace(BILLETTERIE_URL)
+    return null
+  }
+
   if (!isLocalhost) {
     return (
       <ThemeProvider theme={theme}>
